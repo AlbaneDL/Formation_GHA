@@ -35,7 +35,9 @@ jobs:
           name: ${{ needs.build.outputs.artifact_name }}
           path: artifact
       - name : Extract_artifact
-        run : unzip artifact/*.zip -d extracted
+        run : |
+          ls artifact/
+          unzip artifact/*.zip -d extracted
       - name : 'Install PSQL'
         run : |
           sudo apt-get update
