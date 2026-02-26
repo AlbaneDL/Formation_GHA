@@ -57,5 +57,5 @@ jobs:
                -p 5432 \
                -d postgres \
                -U "${{secrets.SUPABASE_USER}}" \
-               -f extracted/scripts/dev.sql
+               -f extracted/scripts/${{vars.SCRIPT_PATH}}
           
