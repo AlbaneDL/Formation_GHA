@@ -1,1 +1,1 @@
-INSERT INTO table_prod(name) VALUES ('Albane');
+INSERT INTO table_prd(name) VALUES ('Albane');
