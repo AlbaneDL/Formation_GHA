@@ -11,17 +11,17 @@ jobs:
     steps :
       - name: checkout
         uses : actions/checkout@v4
-      - name: 'Check applicaiton version'
+      - name: 'Check application version'
         run : echo 'App version is $(cat version.txt)'
-      - name : Bild_app
-        id : Bild_app
+      - name : build_app
+        id : build_app
         run: 
-          VERSION= $(cat version.txt)
-          ARTIFACT= "artifact_$(VERSION)"
+          VERSION=$(cat version.txt)
+          ARTIFACT=artifact_$(VERSION)
           zip -r "scripts/$(ARTIFACT).zip" scripts/
           echo "artifact_name=$ARTIFACT" >> "$GITHUB_OUTPUT"
       - name: 'Upload artifact'
          uses : actions/upload-artifact@v4
          with :
-           name: ${{steps.Bild_app.outputs.artifact_name}}
+           name: ${{steps.build_app.outputs.artifact_name}}
            path : scripts/*.zip
