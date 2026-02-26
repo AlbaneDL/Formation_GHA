@@ -52,9 +52,9 @@ jobs:
                -d postgres \
                -U "$SUPABASE_USER" \
                -f extracted/scripts/dev.sql
-        env:
-          SUPABASE_HOST: aws-1-eu-central-1.pooler.supabase.com
-          SUPABASE_USER: postgres.qxqpncxzbiuhsodhgmwk
-          SUPABASE_PASSWORD: demogha2026
-        
-        
+          env:
+            SUPABASE_HOST: aws-1-eu-central-1.pooler.supabase.com
+            SUPABASE_USER: postgres.qxqpncxzbiuhsodhgmwk
+            SUPABASE_PASSWORD: demogha2026
+          
+          
