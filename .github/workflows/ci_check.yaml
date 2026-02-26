@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name : hello
-      run : echo "All okay'
+      run : echo "All okay"
